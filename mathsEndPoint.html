@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .operations {
+            font-weight: bold;
+        }
+    </style>
+
+    <h1>GET : Maths endpoint</h1>
+    <h2>List of possible query strings:</h2>
+    <hr>
+    <div class="operations">
+        <p>
+            ? op = + & x = number & y = number <br>
+            return {"op":"+", "x":number, "y":number, "value": x+y}
+        </p>
+        <p>
+            ? op = - & x = number & y = number <br>
+            return {"op":"-", "x":number, "y":number, "value": x-y}
+        </p>
+        <p>
+            ? op = * & x = number & y = number <br>
+            return {"op":"*", "x":number, "y":number, "value": x*y}
+        </p>
+        <p>
+            ? op = / & x = number & y = number <br>
+            return {"op":"/", "x":number, "y":number, "value": x/y}
+        </p>
+        <p>
+            ? op = % & x = number & y = number <br>
+            return {"op":"%", "x":number, "y":number, "value": x%y}
+        </p>
+        <p>
+            ? op = ! & n = integer <br>
+            return {"op":"!", "n":integer, "value": n!}
+        </p>
+        <p>
+            ? op = p & n = integer <br>
+            return {"op":"p", "n":integer, "value": true if n is a prime number}
+        </p>
+        <p>
+            ? op = ! & n = integer <br>
+            return {"op":"!", "n":integer, "value: n!}
+        </p>
+        <p>
+            ? op = np & n = integer <br>
+            return {"op":"np", "n":integer, "value: nth prime number}
+        </p>
+    </div>
+</body>
+</html>
