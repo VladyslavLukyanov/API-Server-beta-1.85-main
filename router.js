@@ -97,9 +97,9 @@ export const API_EndPoint = async function (HttpContext) {
                                             operateur['valeur'] = op;
                                             result = controller.faireOperation(operateur, x, y); // 3 params
                                         } else if(x === null || x === "") {
-                                            result = "Veuillez attribuer une valeur à (x). Pour plus d'informations, consultez : http://localhost:5000/api/maths? "
+                                            result = "Veuillez attribuer une valeur à (x). Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? "
                                         } else if(y === null || y === ""){
-                                            result = "Veuillez attribuer une valeur à (y). Pour plus d'informations, consultez : http://localhost:5000/api/maths? "
+                                            result = "Veuillez attribuer une valeur à (y). Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? "
                                         }
                                         
                                     } else {
@@ -112,17 +112,17 @@ export const API_EndPoint = async function (HttpContext) {
                                             operateur['valeur'] = op;
                                             result = controller.faireOperationUnNombre(operateur, n);
                                         } else {
-                                            result = "Veuillez attribuer une valeur à (n). Pour plus d'informations, consultez : http://localhost:5000/api/maths? "
+                                            result = "Veuillez attribuer une valeur à (n). Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? "
                                         }
                                     } else {
-                                        result = " Si vous souhaitez effectuer une opération avec un seul nombre, veuillez le nommer (n). Pour plus d'informations, consultez : http://localhost:5000/api/maths? ";
+                                        result = " Si vous souhaitez effectuer une opération avec un seul nombre, veuillez le nommer (n). Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? ";
                                     }
                                      
                                 } else {
-                                    result = " Nombre de parametres invalide. Pour plus d'informations, consultez : http://localhost:5000/api/maths? ";
+                                    result = " Nombre de parametres invalide. Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? ";
                                 }
                             } else if (!nbParams.includes("op")) {
-                                result = " Veuillez nommer votre operateur (op). Pour plus d'informations, consultez : http://localhost:5000/api/maths? "
+                                result = " Veuillez nommer votre operateur (op). Pour plus d'informations, consultez : https://spiral-jazzy-icecream.glitch.me/api/maths? "
                             }
                             HttpContext.response.JSON(result);
 
