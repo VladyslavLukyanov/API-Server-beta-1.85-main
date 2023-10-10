@@ -108,8 +108,12 @@ export const API_EndPoint = async function (HttpContext) {
                                 } else if(nbParams.length === 2) {
                                     if(nbParams.includes("n")) {
                                         let {op, n} = params;
-                                        operateur['valeur'] = op;
-                                        result = controller.faireOperationUnNombre(operateur, n);
+                                        if(n) {
+                                            operateur['valeur'] = op;
+                                            result = controller.faireOperationUnNombre(operateur, n);
+                                        } else {
+                                            result = "Veuillez attribuer une valeur à (n). Pour plus d'informations, consultez : http://localhost:5000/api/maths? "
+                                        }
                                     } else {
                                         result = " Si vous souhaitez effectuer une opération avec un seul nombre, veuillez le nommer (n). Pour plus d'informations, consultez : http://localhost:5000/api/maths? ";
                                     }
