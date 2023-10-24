@@ -9,5 +9,5 @@ export default class Bookmark extends Model {
         this.addField('Category', 'string');
               
         this.setKey("Title");
-    }
+    } // test
 }
